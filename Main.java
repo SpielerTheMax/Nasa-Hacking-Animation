@@ -50,7 +50,7 @@ public class Main {
             IPs.add("169.204.100.2");
             for (int i = 0; i < amount; i++) {
                 Thread.sleep(100);
-                int deviceId    =  random.nextInt((254 - 1) + 1) + 1;
+                int deviceId    =  random.nextInt((254 - 2) + 1) + 2;
                 String ipAdress = "169.204.100." + Integer.toString(deviceId);
                 boolean alreadyExists   = IPs.contains(ipAdress);
                 if (!alreadyExists) {

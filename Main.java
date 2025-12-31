@@ -14,20 +14,18 @@ public class Main {
         var scanner = new Scanner(System.in);
 
         try {
-            System.out.println("Do u want to infect Nasa www.nasa.gov? [Y]es or [N]o");
-            String choice   = scanner.nextLine().toUpperCase();
+            System.out.println("Do you want to infect Nasa www.nasa.gov? [Y]es or [N]o");
+            String startChoice   = scanner.nextLine().toUpperCase();
             while (true) {
-                if (choice.equals("Y")) {
+                if (startChoice.equals("Y")) {
                     System.out.println("Proceeding ...");
-                    scanner.close();
                     break;
-                } else if (choice.equals("N")) {
+                } else if (startChoice.equals("N")) {
                     System.out.println("Canceled infection ...");
-                    scanner.close();
                     return;
                 } else {
                     System.out.println("Couldn't read awnser your awnser! Please type [Y]es or [N]o!");
-                    choice   = scanner.nextLine().toUpperCase();
+                    startChoice   = scanner.nextLine().toUpperCase();
                 }
             }
             Thread.sleep(500);
@@ -49,6 +47,7 @@ public class Main {
             Thread.sleep(200);
             int amount  = random.nextInt((100 - 55) + 1) + 55;
             List<String> IPs    = new ArrayList<>();
+            IPs.add("169.204.100.2");
             for (int i = 0; i < amount; i++) {
                 Thread.sleep(100);
                 int deviceId    =  random.nextInt((254 - 1) + 1) + 1;
@@ -60,8 +59,33 @@ public class Main {
                 }
             }
             Thread.sleep(1000);
+            System.out.println("Do you want to proceed? [Y]es or [N]o");
+            String proceedingChoice   = scanner.nextLine().toUpperCase();
+            while (true) {
+                if (proceedingChoice.equals("Y")) {
+                    System.out.println("Proceeding ...");
+                    break;
+                } else if (proceedingChoice.equals("N")) {
+                    System.out.println("Uninstalling WannaCryV124 on all devices ...");
+                    Thread.sleep(8000);
+                    System.out.println("Finished uninstalling WannaCryV124 on all devices ...");
+                    Thread.sleep(50);
+                    System.out.println("Disconnection from ip-adress 169.204.100.2 ...");
+                    Thread.sleep(3000);
+                    System.out.println("Disconnect from ip-adress 169.204.100.2 ...");
+                    Thread.sleep(3000);
+                    System.out.println("Stopping WannaCryV124 ...");
+                    Thread.sleep(5000);
+                    scanner.close();
+                    return;
+                } else {
+                    System.out.println("Couldn't read awnser your awnser! Please type [Y]es or [N]o!");
+                    proceedingChoice   = scanner.nextLine().toUpperCase();
+                }
+            }
+            scanner.close();
             System.out.println("Encrypting all systems ...");
-            Thread.sleep(10000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             System.err.println("Error 404!");
             stopped  = true;

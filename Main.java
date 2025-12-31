@@ -29,7 +29,7 @@ public class Main {
                 }
             }
             Thread.sleep(500);
-            System.out.println("Getting ip-adress of Nasa www.nasa.gov ...");
+            System.out.println("Obtaining ip-adress of Nasa www.nasa.gov ...");
             Thread.sleep(5000);
             System.out.println("Successfuly found ip-adress of www.nasa.gov: 169.204.100.2!");
             Thread.sleep(50);
@@ -92,7 +92,7 @@ public class Main {
         }
         while (true) {
             if (stopped) {
-                break;
+                return;
             }
             try {
                 Thread.sleep(50);

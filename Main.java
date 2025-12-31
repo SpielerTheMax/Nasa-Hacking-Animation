@@ -70,7 +70,7 @@ public class Main {
                     Thread.sleep(8000);
                     System.out.println("Finished uninstalling WannaCryV124 on all devices ...");
                     Thread.sleep(50);
-                    System.out.println("Disconnection from ip-adress 169.204.100.2 ...");
+                    System.out.println("Disconnecting from ip-adress 169.204.100.2 ...");
                     Thread.sleep(3000);
                     System.out.println("Disconnect from ip-adress 169.204.100.2 ...");
                     Thread.sleep(3000);
